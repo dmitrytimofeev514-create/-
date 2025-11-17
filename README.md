@@ -16,4 +16,23 @@
 </main>
 </body>
 </html>
+// script.js
+document.getElementById('themeButton').addEventListener('click', () => {
+document.body.classList.toggle('dark-theme');
+});
 
+// Дополнительные стили для темной темы
+const style = document.createElement('style');
+style.textContent = `
+dark-theme {
+background-color: #333;
+color: #f4f4f9;
+}
+dark-theme header {
+background-color: #3700b3;
+}
+dark-theme button {
+background-color: #bb86fc;
+}
+`;
+document.head.appendChild(style);
